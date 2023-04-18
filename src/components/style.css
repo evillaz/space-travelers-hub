@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: #fff;
+  font-family: sans-serif;
+}
+
+/* Header Bar */
+
+.header-bar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid #e8e8e8;
+}
+
+.logo {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.logo * {
+  margin: 0 7px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.logo h1 {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.nav-items,
+.list-item {
+  display: inline-block;
+  margin: 0 10px;
+  text-transform: capitalize;
+}
+
+.list-item:nth-child(3) {
+  border-left: 1.5px solid #868686;
+  padding: 5px 15px;
+}
+
+/* Rocket Part */
+
+.rocket-container {
+  width: 90%;
+  height: auto;
+  padding: 15px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.rocket-items {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin: 10px;
+}
+
+.rocket-items img {
+  width: 150px;
+  height: 130px;
+}
+
+.rocket-detail {
+  margin-left: 20px;
+}
+
+.rocket-name {
+  font-size: 19px;
+  margin: 0 0 10px 0;
+}
+
+.rocket-des {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #868686;
+}
+
+.reserve-bttn {
+  width: 130px;
+  padding: 8px;
+  font-size: 14px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
