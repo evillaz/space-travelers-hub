@@ -7,9 +7,14 @@ import Rockets from './routes/Rockets';
 import Missions from './routes/Missions';
 import Profile from './routes/Profile';
 import './styles/style.css';
+import { rocketItems } from './Redux/RocketsSlice/RocketSlice';
 
 function App() {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(rocketItems());
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(getMissions());

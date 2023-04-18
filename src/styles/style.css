@@ -101,4 +101,5 @@ body {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  text-transform: capitalize;
 }
