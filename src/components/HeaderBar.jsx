@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import spaceLogo from './Images/planet.png';
-import './style.css';
+import '../styles/style.css';
 
 const HeaderBar = () => (
   <div className="header-bar">
@@ -12,9 +12,9 @@ const HeaderBar = () => (
     </NavLink>
     <nav className="nav-items">
       <ul>
-        <li className="list-item"><NavLink to="/" style={{ color: '#000' }}>rockets</NavLink></li>
+        <li className="list-item"><NavLink to="rockets" style={{ color: '#000' }}>rockets</NavLink></li>
         <li className="list-item"><NavLink to="missions" style={{ color: '#000' }}>missions</NavLink></li>
-        <li className="list-item"><NavLink to="/profile" style={{ color: '#000' }}>my profile</NavLink></li>
+        <li className="list-item"><NavLink to="profile" style={{ color: '#000' }}>my profile</NavLink></li>
       </ul>
     </nav>
   </div>

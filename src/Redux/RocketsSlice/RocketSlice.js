@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import data from '../../TempRocketData';
+import data from '../../components/TempRocketData';
 
 const initialState = {
   RocketDatile: data,
