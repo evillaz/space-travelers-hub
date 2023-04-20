@@ -24,7 +24,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="rockets" element={<Rockets />} />
+          <Route path="/" element={<Rockets />} />
           <Route path="missions" element={<Missions />} />
           <Route path="profile" element={<Profile />} />
         </Route>
