@@ -12,9 +12,9 @@ const HeaderBar = () => (
     </NavLink>
     <nav className="nav-items">
       <ul>
-        <li className="list-item"><NavLink to="/" style={{ color: '#000' }}>rockets</NavLink></li>
-        <li className="list-item"><NavLink to="missions" style={{ color: '#000' }}>missions</NavLink></li>
-        <li className="list-item"><NavLink to="profile" style={{ color: '#000' }}>my profile</NavLink></li>
+        <li className="list-item"><NavLink to="rockets" style={{ color: '#000' }}>Rockets</NavLink></li>
+        <li className="list-item"><NavLink to="missions" style={{ color: '#000' }}>Missions</NavLink></li>
+        <li className="list-item"><NavLink to="/" style={{ color: '#000' }}>My Profile</NavLink></li>
       </ul>
     </nav>
   </div>
