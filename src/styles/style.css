@@ -159,3 +159,58 @@ body {
   color: #413f3f;
   font-size: 22px;
 }
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+
+tr,
+td,
+thead {
+  padding: 10px;
+  border: 2px solid #eaecef;
+  text-align: left;
+}
+
+th {
+  border: 2px solid #eaecef;
+  padding: 10px;
+  background: #fff;
+}
+
+tr:nth-child(odd) {
+  background: #f2f2f2;
+}
+
+.mission-tab {
+  font-weight: 600;
+  width: 0;
+}
+
+.mission-des {
+  width: 70%;
+}
+
+.join-bttn {
+  border: 1px solid #6d757d;
+  padding: 10px;
+  font-weight: 600;
+  background: #f2f2f2;
+}
+
+.memeber-status {
+  background: #6d757d;
+  padding: 7px;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.join-bttn,
+.memeber-status {
+  border-radius: 2px;
+  cursor: pointer;
+}

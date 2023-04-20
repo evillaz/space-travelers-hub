@@ -1,4 +1,5 @@
 import MissionsList from './MissionsList';
+import '../styles/style.css';
 
 const MissionsTable = () => {
   const head = ['Mission', 'Description', 'Status', ''];
