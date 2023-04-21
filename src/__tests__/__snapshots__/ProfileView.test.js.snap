@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProfileView.jsx Testing of ProfileView.jsx 1`] = `
+exports['ProfileView.jsx Testing of ProfileView.jsx 1'] = `
 <div>
   <div
     class="profile-container"
