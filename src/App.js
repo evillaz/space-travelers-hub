@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { getMissions } from './Redux/missions/missionsSlice';
 import Layout from './components/Layout';
 import Rockets from './routes/Rockets';
 import Missions from './routes/Missions';
@@ -15,7 +14,7 @@ function App() {
   useEffect(() => {
     dispatch(rocketItems());
   }, [dispatch]);
-  
+
   return (
     <>
       <Routes>
