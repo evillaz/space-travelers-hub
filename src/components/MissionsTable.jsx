@@ -3,15 +3,15 @@ import MissionsList from './MissionsList';
 const MissionsTable = () => {
   const head = ['Mission', 'Description', 'Status', ''];
   return (
-    <table>
-      <thead>
+    <table className="missions-display">
+      <thead className="missions-header">
         <tr>
           {head.map((title) => (
-            <th key={title}>{title}</th>
+            <th className={title} key={title}>{title}</th>
           ))}
         </tr>
       </thead>
-      <tbody>
+      <tbody className="missions-list">
         <MissionsList />
       </tbody>
     </table>
