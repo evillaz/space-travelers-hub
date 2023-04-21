@@ -15,11 +15,7 @@ function App() {
   useEffect(() => {
     dispatch(rocketItems());
   }, [dispatch]);
-
-  useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
-
+  
   return (
     <>
       <Routes>
