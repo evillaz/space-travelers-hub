@@ -1,3 +1,8 @@
+<div align="center"><h1>Space Travelerers Hub</h1>
+<img src="https://github.com/evillaz/react-redux-group-project/blob/dev/live%20pic.png">
+</div>
+
+
 <a name="readme-top"></a>
 
 <!--
