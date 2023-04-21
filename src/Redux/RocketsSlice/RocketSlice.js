@@ -30,7 +30,7 @@ const rocketSlice = createSlice({
   reducers: {
     reserveActive: (state, action) => {
       const newRockets = state.RocketDatile.map((item) => {
-        if (item.name !== action.payload) return item;
+        if (item.id !== action.payload) return item;
         return { ...item, reserved: true };
       });
 
@@ -41,7 +41,7 @@ const rocketSlice = createSlice({
     },
     cancelReserve: (state, action) => {
       const newRockets = state.RocketDatile.map((item) => {
-        if (item.name !== action.payload) return item;
+        if (item.id !== action.payload) return item;
         return { ...item, reserved: false };
       });
       return {

@@ -9,7 +9,7 @@ const Rockets = () => {
   return (
     <div className="rocket-container">
       {RocketDatile.map((item) => (
-        <div className="rocket-items" key={item.name}>
+        <div className="rocket-items" key={item.id}>
           <img src={item.image} alt={item.name} />
           <ul className="rocket-detail">
             <li><h2 className="rocket-name">{item.name}</h2></li>
@@ -24,7 +24,7 @@ const Rockets = () => {
             {item.reserved && (
               <button
                 type="button"
-                onClick={() => dispatch(cancelReserve(item.name))}
+                onClick={() => dispatch(cancelReserve(item.id))}
                 className="cancle-reserve"
               >
 
@@ -34,7 +34,7 @@ const Rockets = () => {
             {!item.reserved && (
               <button
                 type="button"
-                onClick={() => dispatch(reserveActive(item.name))}
+                onClick={() => dispatch(reserveActive(item.id))}
                 className="reserve-bttn"
               >
                 Reserve Rocket
