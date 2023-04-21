@@ -31,8 +31,9 @@ exports[`HeaderBar Testing of HeaderBar.jsx 1`] = `
           class="list-item"
         >
           <a
-            class=""
-            href="/rockets"
+            aria-current="page"
+            class="active"
+            href="/"
             style="color: rgb(0, 0, 0);"
           >
             Rockets
@@ -53,9 +54,8 @@ exports[`HeaderBar Testing of HeaderBar.jsx 1`] = `
           class="list-item"
         >
           <a
-            aria-current="page"
-            class="active"
-            href="/"
+            class=""
+            href="/profile"
             style="color: rgb(0, 0, 0);"
           >
             My Profile

@@ -34,8 +34,9 @@ Object {
               class="list-item"
             >
               <a
-                class=""
-                href="/rockets"
+                aria-current="page"
+                class="active"
+                href="/"
                 style="color: rgb(0, 0, 0);"
               >
                 Rockets
@@ -56,9 +57,8 @@ Object {
               class="list-item"
             >
               <a
-                aria-current="page"
-                class="active"
-                href="/"
+                class=""
+                href="/profile"
                 style="color: rgb(0, 0, 0);"
               >
                 My Profile
@@ -71,45 +71,8 @@ Object {
         class="wrapper"
       >
         <div
-          class="profile-container"
-        >
-          <div
-            class="my-subtab"
-          >
-            <h3
-              class="profile-heading"
-            >
-              My Missions
-            </h3>
-            <ul
-              class="feature-list"
-            >
-              <div
-                class="feature-item"
-              >
-                You haven't joined any Missions yet
-              </div>
-            </ul>
-          </div>
-          <div
-            class="my-subtab"
-          >
-            <h3
-              class="profile-heading"
-            >
-              My Rockets
-            </h3>
-            <ul
-              class="feature-list"
-            >
-              <li
-                class="feature-item"
-              >
-                not rocket yet
-              </li>
-            </ul>
-          </div>
-        </div>
+          class="rocket-container"
+        />
       </div>
     </div>
   </body>,
@@ -143,8 +106,9 @@ Object {
             class="list-item"
           >
             <a
-              class=""
-              href="/rockets"
+              aria-current="page"
+              class="active"
+              href="/"
               style="color: rgb(0, 0, 0);"
             >
               Rockets
@@ -165,9 +129,8 @@ Object {
             class="list-item"
           >
             <a
-              aria-current="page"
-              class="active"
-              href="/"
+              class=""
+              href="/profile"
               style="color: rgb(0, 0, 0);"
             >
               My Profile
@@ -180,45 +143,8 @@ Object {
       class="wrapper"
     >
       <div
-        class="profile-container"
-      >
-        <div
-          class="my-subtab"
-        >
-          <h3
-            class="profile-heading"
-          >
-            My Missions
-          </h3>
-          <ul
-            class="feature-list"
-          >
-            <div
-              class="feature-item"
-            >
-              You haven't joined any Missions yet
-            </div>
-          </ul>
-        </div>
-        <div
-          class="my-subtab"
-        >
-          <h3
-            class="profile-heading"
-          >
-            My Rockets
-          </h3>
-          <ul
-            class="feature-list"
-          >
-            <li
-              class="feature-item"
-            >
-              not rocket yet
-            </li>
-          </ul>
-        </div>
-      </div>
+        class="rocket-container"
+      />
     </div>
   </div>,
   "debug": [Function],

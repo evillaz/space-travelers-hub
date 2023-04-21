@@ -1,58 +1,95 @@
 import { render, fireEvent } from '@testing-library/react';
-import { useDispatch, useSelector } from 'react-redux';
-import Rockets from '../routes/Rockets';
+import { useSelector, useDispatch } from 'react-redux';
 import { reserveActive, cancelReserve } from '../Redux/RocketsSlice/RocketSlice';
+import Rockets from '../routes/Rockets';
 
-jest.mock('react-redux');
+jest.mock('react-redux', () => ({
+  useSelector: jest.fn(),
+  useDispatch: jest.fn(),
+}));
 
-describe('Rockets Component', () => {
-  const mockDispatch = jest.fn();
+describe('Rockets component', () => {
+  let dispatch;
 
   beforeEach(() => {
-    useSelector.mockImplementation((selector) => selector({
-      rocket: {
-        RocketDatile: [
-          {
-            name: 'rocket1',
-            description: 'Rocket 1 Description',
-            image: 'rocket1.jpg',
-            reserved: false,
-          },
-          {
-            name: 'rocket2',
-            description: 'Rocket 2 Description',
-            image: 'rocket2.jpg',
-            reserved: true,
-          },
-        ],
-      },
-    }));
-    useDispatch.mockReturnValue(mockDispatch);
+    dispatch = jest.fn();
+    useDispatch.mockReturnValue(dispatch);
   });
 
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  test('Should render Rockets on the Screen', () => {
-    const { getByText, getAllByAltText } = render(<Rockets />);
-    const rocketNames = getAllByAltText(/rocket/).map((element) => element.getAttribute('alt'));
-    expect(rocketNames).toEqual(['rocket1', 'rocket2']);
-    expect(getByText('Rocket 1 Description')).toBeInTheDocument();
-    expect(getByText('Rocket 2 Description')).toBeInTheDocument();
+  it('renders rocket items', () => {
+    useSelector.mockReturnValue({
+      RocketDatile: [
+        {
+          id: 1,
+          name: 'Rocket 1',
+          description: 'Rocket 1 description',
+          image: 'https://rocket1image.com',
+          reserved: false,
+        },
+        {
+          id: 2,
+          name: 'Rocket 2',
+          description: 'Rocket 2 description',
+          image: 'https://rocket2image.com',
+          reserved: true,
+        },
+      ],
+    });
+
+    const { getByText, getAllByRole } = render(<Rockets />);
+
+    expect(getByText('Rocket 1')).toBeInTheDocument();
+    expect(getByText('Rocket 2')).toBeInTheDocument();
+
+    const buttons = getAllByRole('button');
+    expect(buttons).toHaveLength(2);
+    expect(buttons[0]).toHaveTextContent('Reserve Rocket');
+    expect(buttons[1]).toHaveTextContent('cancel Reservation');
   });
 
-  test('Should dispatch cancelReserve action when cancel reservation button is clicked', () => {
-    const { getByText } = render(<Rockets />);
-    const cancelButton = getByText('cancel Reservation');
-    fireEvent.click(cancelButton);
-    expect(mockDispatch).toHaveBeenCalledWith(cancelReserve('rocket2'));
-  });
+  it('dispatches reserveActive action when reserve button is clicked', () => {
+    useSelector.mockReturnValue({
+      RocketDatile: [
+        {
+          id: 1,
+          name: 'Rocket 1',
+          description: 'Rocket 1 description',
+          image: 'https://rocket1image.com',
+          reserved: false,
+        },
+      ],
+    });
 
-  test('Should dispatch reserveActive action when reserve rocket button is clicked', () => {
-    const { getByText } = render(<Rockets />);
-    const reserveButton = getByText('Reserve Rocket');
+    const { getByRole } = render(<Rockets />);
+    const reserveButton = getByRole('button', { name: 'Reserve Rocket' });
+
     fireEvent.click(reserveButton);
-    expect(mockDispatch).toHaveBeenCalledWith(reserveActive('rocket1'));
+
+    expect(dispatch).toHaveBeenCalledWith(reserveActive(1));
+  });
+
+  it('dispatches cancelReserve action when cancel reservation button is clicked', () => {
+    useSelector.mockReturnValue({
+      RocketDatile: [
+        {
+          id: 1,
+          name: 'Rocket 1',
+          description: 'Rocket 1 description',
+          image: 'https://rocket1image.com',
+          reserved: true,
+        },
+      ],
+    });
+
+    const { getByRole } = render(<Rockets />);
+    const cancelButton = getByRole('button', { name: 'cancel Reservation' });
+
+    fireEvent.click(cancelButton);
+
+    expect(dispatch).toHaveBeenCalledWith(cancelReserve(1));
   });
 });
