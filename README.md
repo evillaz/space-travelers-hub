@@ -199,6 +199,11 @@ Visual studio code, another realiable code editor or a Web browser
 - Twitter: [@evillazz](https://twitter.com/evillazz)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/eduardo-villarreal-144a8925a)
 
+👤 **Syed Atril**
+
+- GitHub: [@githubhandle](https://github.com/Atril33)
+- Twitter: [@twitterhandle](https://twitter.com/AtrilSyed)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/syed-atril-831696248/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
