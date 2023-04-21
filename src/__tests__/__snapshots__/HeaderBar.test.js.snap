@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports['HeaderBar Testing of HeaderBar.jsx 1'] = `
+<DocumentFragment>
+  <div
+    class="header-bar"
+  >
+    <a
+      aria-current="page"
+      class="active"
+      href="/"
+      style="color: rgb(0, 0, 0);"
+    >
+      <div
+        class="logo"
+      >
+        <img
+          alt="Space Logo"
+          src="planet.png"
+        />
+        <h1>
+          Space Travelers Hub
+        </h1>
+      </div>
+    </a>
+    <nav
+      class="nav-items"
+    >
+      <ul>
+        <li
+          class="list-item"
+        >
+          <a
+            aria-current="page"
+            class="active"
+            href="/"
+            style="color: rgb(0, 0, 0);"
+          >
+            Rockets
+          </a>
+        </li>
+        <li
+          class="list-item"
+        >
+          <a
+            class=""
+            href="/missions"
+            style="color: rgb(0, 0, 0);"
+          >
+            Missions
+          </a>
+        </li>
+        <li
+          class="list-item"
+        >
+          <a
+            class=""
+            href="/profile"
+            style="color: rgb(0, 0, 0);"
+          >
+            My Profile
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</DocumentFragment>
+`;

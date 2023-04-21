@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports['ProfileView.jsx Testing of ProfileView.jsx 1'] = `
+<div>
+  <div
+    class="profile-container"
+  >
+    <div
+      class="my-subtab"
+    >
+      <h3
+        class="profile-heading"
+      >
+        My Missions
+      </h3>
+      <ul
+        class="feature-list"
+      >
+        <li
+          class="feature-item"
+        >
+          Mission 1
+        </li>
+      </ul>
+    </div>
+    <div
+      class="my-subtab"
+    >
+      <h3
+        class="profile-heading"
+      >
+        My Rockets
+      </h3>
+      <ul
+        class="feature-list"
+      >
+        <li
+          class="feature-item"
+        >
+          Rocket 1
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
