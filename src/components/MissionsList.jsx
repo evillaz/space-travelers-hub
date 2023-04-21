@@ -6,12 +6,11 @@ const MissionsList = () => {
   const dispatch = useDispatch();
 
   return (
-    <>
-      {missions.map((mission) => (
-        <tr className="mission-item" key={mission.mission_id}>
-          <td className="mission-name">{mission.mission_name}</td>
-          <td className="mission-description">{mission.description}</td>
-          {!mission.reserved && (
+    missions.map((mission) => (
+      <tr className="mission-item" key={mission.mission_id}>
+        <td className="mission-name">{mission.mission_name}</td>
+        <td className="mission-description">{mission.description}</td>
+        {!mission.reserved && (
           <>
             <td className="badge-wrapper">
               <button type="button" className="mission-badge">
@@ -24,8 +23,8 @@ const MissionsList = () => {
               </button>
             </td>
           </>
-          )}
-          {mission.reserved && (
+        )}
+        {mission.reserved && (
           <>
             <td className="badge-wrapper">
               <button type="button" className="mission-badge reserved">
@@ -38,10 +37,9 @@ const MissionsList = () => {
               </button>
             </td>
           </>
-          )}
-        </tr>
-      ))}
-    </>
+        )}
+      </tr>
+    ))
   );
 };
 
